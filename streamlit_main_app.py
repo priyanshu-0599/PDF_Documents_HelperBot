@@ -18,7 +18,7 @@ def create_sources_string(source_urls: Set[str]) -> str:
 st.header("PDF Documents Helper-Bot")
 query = st.text_input(
     "User Query", placeholder="Enter your query here...", key="user_query"
-) or st.button("Search",key="button1")
+) or st.button("Search", key="button1")
 
 if (
     "chat_answers_history" not in st.session_state
@@ -35,11 +35,14 @@ if query:
             query=query, chat_history=st.session_state["chat_history"]
         )
         sources = set(
-            [f"{docs.metadata['source']}\\page:{docs.metadata['page']}" for docs in generated_response["source_documents"]]
+            [
+                f"{docs.metadata['source']}\\page:{docs.metadata['page']}"
+                for docs in generated_response["source_documents"]
+            ]
         )
         formatted_response = (
-            f"{generated_response['answer']} \n\n {create_sources_string(sources)}" 
-            )
+            f"{generated_response['answer']} \n\n {create_sources_string(sources)}"
+        )
         st.session_state.chat_history.append((query, generated_response["answer"]))
         st.session_state.user_query_history.append(query)
         st.session_state.chat_answers_history.append(formatted_response)
