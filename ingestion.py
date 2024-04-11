@@ -15,6 +15,7 @@ def ingestion_docs():
         chunk_overlap=30,
         separators=["\n\n", " \n", " ", "", " \n \n", "  ", "\t"],
         keep_separator=False,
+        length_function=len,
     )
     raw_docs = loader.load()
     print(f"Loaded {len(raw_docs)} documents from given path")
