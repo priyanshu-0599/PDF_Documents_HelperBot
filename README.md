@@ -1,4 +1,35 @@
 # PDF_Documents_HelperBot
 
 Please install pipenv package first for running the code in your device, 
-Install dependencies of the project from pipfile by running command pipenv install
+Install dependencies of the project from pipfile by running command pipenv install# PDF_Documents_HelperBot_Streamlit_App
+
+## Introduction
+The PDF_Documents_HelperBot_Streamlit_App is a user-friendly web application built using Streamlit that leverages the capabilities of the PDF_Documents_HelperBot. This app allows users to interactively ask questions and receive answers along with relevant PDF document sources.
+
+## Features
+- Interactive text input for user queries
+- Real-time response generation using the LLM model
+- Display of chat history and user queries
+- Integration with PDF_Documents_HelperBot for source document retrieval
+
+## Installation
+To run the app, you need to have Python and Streamlit installed on your machine. You can install the required dependencies by running the following command in your terminal:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+To use the PDF_Documents_HelperBot_Streamlit_App, simply run the `app.py` script using the following command:
+
+```bash
+streamlit run app.py
+```
+
+After running the script, open your web browser and navigate to `http://localhost:8501` to access the app. You can now start asking questions and receive answers along with relevant PDF document sources.
+
+## Contributing
+We welcome contributions to improve the PDF_Documents_HelperBot_Streamlit_App. If you find any issues or have suggestions for new features, please open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
