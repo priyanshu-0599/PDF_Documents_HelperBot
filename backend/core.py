@@ -14,7 +14,7 @@ def run_llm(query: str, chat_history: List[Tuple[str, Any]] = []) -> Any:
     docs_search = PineconeVectorStore.from_existing_index(
         index_name=INDEX_NAME, embedding=embeddings
     )
-    chat_llm = ChatOpenAI(model="gpt-3.5-turbo", verbose=True, temperature=0)
+    chat_llm = ChatOpenAI(model="gpt-4-0613", verbose=True, temperature=0)
     qa = ConversationalRetrievalChain.from_llm(
         llm=chat_llm,
         chain_type="stuff",
