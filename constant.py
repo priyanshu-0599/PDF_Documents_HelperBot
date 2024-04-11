@@ -1,2 +1,2 @@
-INDEX_NAME = "pdf-document-vectordb"
-FILE_PATH = "D:\\Board_Meetings"
+INDEX_NAME = "pdf-document-vectordb" # Enter database name here
+FILE_PATH = "D:\\"  # Enter path of the pdf documents here
