@@ -13,7 +13,7 @@ def ingestion_docs():
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
         chunk_overlap=30,
-        separators=["\n\n", " \n", " ", "", " \n \n", "  ", "\t"],
+        separators=["\n\n", " \n", " ", "", " \n \n", "  "],
         keep_separator=False,
         length_function=len,
     )
